@@ -58,15 +58,14 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest]
-        #os: [ubuntu-latest, macos-latest, windows-latest]
+        os: [ubuntu-latest, macos-latest, windows-latest]
         include:
         - os: ubuntu-latest
           path: ~/.cache/pip
         - os: macos-latest
           path: ~/Library/Caches/pip
-        # - os: windows-latest
-        #   path: ~\AppData\Local\pip\Cache
+        - os: windows-latest
+          path: ~\AppData\Local\pip\Cache
         python-version: [3.7, 3.8, 3.9]
     steps:
     - name: Don't mess with line endings
@@ -87,41 +86,11 @@ jobs:
         restore-keys: |
          ${{ matrix.os }}-${{ matrix.python-version }}-pip-
 
-    # SAXON BUILD SCRIPTS
-    - name: Install Saxon (ubuntu)
-      if: ${{ matrix.os == 'ubuntu-latest' }}
-      run: |
-        scripts/ubuntu_saxon_install.sh
-        echo "LD_LIBRARY_PATH=${{ env.LD_LIBRARY_PATH }}:/usr/lib/rt/lib/amd64" >> $GITHUB_ENV
-        echo "PYTHONPATH=${{ env.PYTHONPATH }}:/opt/saxonica/Saxon.C.API/python-saxon" >> $GITHUB_ENV
-    # MAC OS INSTALL
-    - name: Install Saxon (mac OS)
-      if: ${{ matrix.os == 'macos-latest' }}
-      run: |
-        bash scripts/mac_saxon_install.sh
-        echo "JET_HOME=/opt/saxonica/rt" >> $GITHUB_ENV
-        echo "DYLD_LIBRARY_PATH=/opt/saxonica/rt/lib/jetvm:/opt/saxonica:${{ env.DYLD_LIBRARY_PATH }}" >> $GITHUB_ENV
-        echo "PYTHONPATH=${{ env.PYTHONPATH }}:/opt/saxonica/Saxon.C.API/python-saxon" >> $GITHUB_ENV
     # Windows Dev tools
     - name: Install microsoft dev tools
       if: ${{ matrix.os == 'windows-latest' }}
       uses: ilammy/msvc-dev-cmd@v1
 
-    # download saxonc with the built-in powershell command rather than wget.
-    - name: Download saxonc (windows)
-      if: ${{ matrix.os == 'windows-latest' }}
-      run: |
-        Invoke-WebRequest -Uri https://www.saxonica.com/saxon-c/libsaxon-HEC-win-setup-v1.2.1.exe -OutFile saxon.exe
-        
-    # install saxonc in non-interactive batch mode and specify the destination directory
-    - name: Install and build saxon (windows)
-      if: ${{ matrix.os == 'windows-latest' }}
-      run: |
-        .\saxon.exe /batch /dest "D:\a\action-play\action-play\sax"
-        cd "D:\a\action-play\action-play\sax\Saxon.C.API\python-saxon"
-        python saxon-setup.py build_ext -if
-
-        
     - name: Install build tools
       run: |
         make develop

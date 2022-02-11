@@ -20,7 +20,7 @@ import sys
 
 from pkg_resources import resource_filename
 
-import saxonc
+import saxonpy as saxonc
 
 from trestle.core.err import TrestleError
 

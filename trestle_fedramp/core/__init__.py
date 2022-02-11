@@ -15,7 +15,7 @@
 
 import atexit
 
-import saxonc
+import saxonpy as saxonc
 
 
 def saxon_release():

@@ -37,7 +37,7 @@ def test_init() -> None:
 def test_init_invalid_baseline(monkeypatch, tmp_path: pathlib.Path) -> None:
     """Invalid baseline path."""
     # change Fedramp baseline path
-    monkeypatch.setattr(const, 'FEDRAM_BASELINE', str(tmp_path / 'invalid_file'))
+    monkeypatch.setattr(const, 'FEDRAM_BASELINE', './invalid_file')
     with pytest.raises(TrestleError, match='Fedramp baseline directory'):
         FedrampValidator()
 
@@ -45,7 +45,7 @@ def test_init_invalid_baseline(monkeypatch, tmp_path: pathlib.Path) -> None:
 def test_init_invalid_registry(monkeypatch, tmp_path: pathlib.Path) -> None:
     """Invalid registry path."""
     # change Fedramp baseline path
-    monkeypatch.setattr(const, 'FEDRAMP_REGISTRY', str(tmp_path / 'invalid_file'))
+    monkeypatch.setattr(const, 'FEDRAMP_REGISTRY', './invalid_file')
     with pytest.raises(TrestleError, match='Fedramp registry directory'):
         FedrampValidator()
 
