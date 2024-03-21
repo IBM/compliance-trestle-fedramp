@@ -1,0 +1,2959 @@
+{
+  "system-security-plan": {
+    "uuid": "9809eddf-2cd5-468f-97c5-9769905d0629",
+    "metadata": {
+      "title": "Test FedRAMP System Security Plan (SSP)",
+      "published": "2023-08-31T00:00:00Z",
+      "last-modified": "2023-08-31T00:00:00Z",
+      "version": "test-oscal-1.0.4",
+      "oscal-version": "1.0.4",
+      "revisions": [
+        {
+          "published": "2023-06-30T00:00:00Z",
+          "version": "1.0",
+          "oscal-version": "1.0.4",
+          "props": [
+            {
+              "name": "party-uuid",
+              "uuid": "528974e9-fcde-494f-a2fa-35d6f1e31171",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "6b286b5d-8f07-4fa7-8847-1dd0d88f73fb"
+            }
+          ],
+          "remarks": "Initial publication."
+        }
+      ],
+      "props": [
+        {
+          "name": "marking",
+          "value": "Controlled Unclassified Information"
+        },
+        {
+          "name": "resolution-resource",
+          "ns": "https://fedramp.gov/ns/oscal",
+          "value": "ace2963d-ecb4-4be5-bdd0-1f6fd7610f41"
+        }
+      ],
+      "roles": [
+        {
+          "id": "fedramp-pmo",
+          "title": "FedRAMP Program Management Office",
+          "description": "The FedRAMP PMO resides within GSA and supports agencies and cloud service providers through the FedRAMP authorization process and maintains a secure repository of FedRAMP authorizations to enable reuse of security packages."
+        },
+        {
+          "id": "fedramp-jab",
+          "title": "FedRAMP Program Management Office",
+          "description": "Members of the JAB include the chief information officers (CIOs) from the Department of Defense, Department of Homeland Security, and General Services Administration. The JAB serves as the primary governance and decision-making body for FedRAMP."
+        },
+        {
+          "id": "prepared-by",
+          "title": "Prepared By",
+          "description": "The organization that prepared this SSP. If developed in-house, this is the CSP itself."
+        },
+        {
+          "id": "prepared-for",
+          "title": "Prepared For",
+          "description": "The organization for which this SSP was prepared. Typically the CSP."
+        },
+        {
+          "id": "content-approver",
+          "title": "System Security Plan Approval",
+          "description": "The individual or individuals accountable for the accuracy of this SSP."
+        },
+        {
+          "id": "cloud-service-provider",
+          "title": "Cloud Service Provider",
+          "short-name": "CSP"
+        },
+        {
+          "id": "system-owner",
+          "title": "Information System Owner",
+          "description": "The individual within the CSP who is ultimately accountable for everything related to this system."
+        },
+        {
+          "id": "authorizing-official",
+          "title": "Authorizing Official",
+          "description": "The individual or individuals who must grant this system an authorization to operate."
+        },
+        {
+          "id": "authorizing-official-poc",
+          "title": "Authorizing Official's Point of Contact",
+          "description": "The individual representing the authorizing official."
+        },
+        {
+          "id": "system-poc-management",
+          "title": "Information System Management Point of Contact (POC)",
+          "description": "The highest level manager who responsible for system operation on behalf of the System Owner."
+        },
+        {
+          "id": "system-poc-technical",
+          "title": "Information System Technical Point of Contact",
+          "description": "The individual or individuals leading the technical operation of the system."
+        },
+        {
+          "id": "system-poc-other",
+          "title": "General Point of Contact (POC)",
+          "description": "A general point of contact for the system, designated by the system owner."
+        },
+        {
+          "id": "information-system-security-officer",
+          "title": "System Information System Security Officer (or Equivalent)",
+          "description": "The individual accountable for the security posture of the system on behalf of the system owner."
+        },
+        {
+          "id": "privacy-poc",
+          "title": "Privacy Official's Point of Contact",
+          "description": "The individual responsible for the privacy threshold analysis and if necessary the privacy impact assessment."
+        },
+        {
+          "id": "asset-owner",
+          "title": "Owner of an inventory item within the system."
+        },
+        {
+          "id": "asset-administrator",
+          "title": "Administrative responsibility an inventory item within the system."
+        },
+        {
+          "id": "isa-poc-local",
+          "title": "ICA POC (Local)",
+          "description": "The point of contact for an interconnection on behalf of this system.",
+          "remarks": "Remove this role if there are no ICAs."
+        },
+        {
+          "id": "isa-poc-remote",
+          "title": "ICA POC (Remote)",
+          "description": "The point of contact for an interconnection on behalf of this external system to which this system connects.",
+          "remarks": "Remove this role if there are no ICAs."
+        },
+        {
+          "id": "isa-authorizing-official-local",
+          "title": "ICA Signatory (Local)",
+          "description": "Responsible for signing an interconnection security agreement on behalf of this system.",
+          "remarks": "Remove this role if there are no ICAs."
+        },
+        {
+          "id": "isa-authorizing-official-remote",
+          "title": "ICA Signatory (Remote)",
+          "description": "Responsible for signing an interconnection security agreement on behalf of the external system to which this system connects.",
+          "remarks": "Remove this role if there are no ICAs."
+        },
+        {
+          "id": "consultant",
+          "title": "Consultant",
+          "description": "Any consultants involved with developing or maintaining this content."
+        },
+        {
+          "id": "customer",
+          "title": "Customer",
+          "description": "Represents any customers of this system as may be necessary for assigning customer responsibility."
+        },
+        {
+          "id": "admin-unix",
+          "title": "[SAMPLE]Unix Administrator",
+          "description": "This is a sample role."
+        },
+        {
+          "id": "admin-client",
+          "title": "[SAMPLE]Client Administrator",
+          "description": "This is a sample role."
+        }
+      ],
+      "locations": [
+        {
+          "uuid": "27b78960-59ef-4619-82b0-ae20b9c709ac",
+          "title": "CSP HQ",
+          "address": {
+            "type": "work",
+            "addr-lines": [
+              "Suite 0000",
+              "1234 Some Street"
+            ],
+            "city": "Haven",
+            "state": "ME",
+            "postal-code": "00000"
+          },
+          "remarks": "There must be one location identifying the CSP's primary business address, such as the CSP's HQ, or the address of the system owner's primary business location."
+        }
+      ],
+      "parties": [
+        {
+          "uuid": "6b286b5d-8f07-4fa7-8847-1dd0d88f73fb",
+          "type": "organization",
+          "name": "Cloud Service Provider (CSP) Name",
+          "short-name": "CSP Acronym/Short Name",
+          "links": [
+            {
+              "href": "#31a46c4f-2959-4287-bc1c-67297d7da60b",
+              "rel": "logo"
+            }
+          ],
+          "location-uuids": [
+            "27b78960-59ef-4619-82b0-ae20b9c709ac"
+          ],
+          "remarks": "Replace sample CSP information.\n\nCSP information must be present and associated with the \\\"cloud-service-provider\\\" role via `responsible-party`."
+        },
+        {
+          "uuid": "77e0e2c8-2560-4fe9-ac78-c3ff4ffc9f6d",
+          "type": "organization",
+          "name": "Federal Risk and Authorization Management Program: Program Management Office",
+          "short-name": "FedRAMP PMO",
+          "links": [
+            {
+              "href": "https://fedramp.gov",
+              "rel": "homepage"
+            },
+            {
+              "href": "#a2381e87-3d04-4108-a30b-b4d2f36d001f",
+              "rel": "logo"
+            },
+            {
+              "href": "#1a23a771-d481-4594-9a1a-71d584fa4123",
+              "rel": "reference"
+            }
+          ],
+          "email-addresses": [
+            "info@fedramp.gov"
+          ],
+          "addresses": [
+            {
+              "type": "work",
+              "addr-lines": [
+                "1800 F St. NW"
+              ],
+              "city": "Washington",
+              "state": "DC",
+              "postal-code": "20006",
+              "country": "US"
+            }
+          ],
+          "remarks": "This party entry must be present in a FedRAMP SSP.\n\nThe uuid may be different; however, the uuid must be associated with the \\\"fedramp-pmo\\\" role in the responsible-party assemblies."
+        },
+        {
+          "uuid": "49017ec3-9f51-4dbd-9253-858c2b1295fd",
+          "type": "organization",
+          "name": "Federal Risk and Authorization Management Program: Joint Authorization Board",
+          "short-name": "FedRAMP JAB",
+          "links": [
+            {
+              "href": "#a2381e87-3d04-4108-a30b-b4d2f36d001f",
+              "rel": "logo"
+            }
+          ],
+          "remarks": "This party entry must be present in a FedRAMP SSP.\n\nThe uuid may be different; however, the uuid must be associated with the \\\"fedramp-jab\\\" role in the responsible-party assemblies."
+        },
+        {
+          "uuid": "78992555-4a99-4eaa-868c-f2c249679dd3",
+          "type": "organization",
+          "name": "External Organization",
+          "short-name": "External",
+          "remarks": "Generic placeholder for any external organization."
+        },
+        {
+          "uuid": "f595397b-cbe4-4a87-8c86-9bff91c4e7fd",
+          "type": "organization",
+          "name": "Agency Name",
+          "short-name": "A.N.",
+          "remarks": "Generic placeholder for an authorizing agency."
+        },
+        {
+          "uuid": "8e3d39da-4851-4d2a-adb5-4b5585ded952",
+          "type": "organization",
+          "name": "Name of Consulting Org",
+          "short-name": "NOCO",
+          "links": [
+            {
+              "href": "https://example.com"
+            },
+            {
+              "href": "#2c1747d6-874a-49a2-8488-2fd9735416bf",
+              "rel": "logo"
+            }
+          ],
+          "email-addresses": [
+            "poc@example.com"
+          ],
+          "addresses": [
+            {
+              "type": "work",
+              "addr-lines": [
+                "3333 Corporate Way"
+              ],
+              "city": "Washington",
+              "state": "DC",
+              "postal-code": "00000",
+              "country": "US"
+            }
+          ]
+        },
+        {
+          "uuid": "80361ec4-bfce-4b5c-85c8-313d6ebd220b",
+          "type": "organization",
+          "name": "[SAMPLE]Remote System Org Name"
+        },
+        {
+          "uuid": "09ad840f-aa79-43aa-9f22-25182c2ab11b",
+          "type": "person",
+          "name": "[SAMPLE]ICA POC's Name",
+          "props": [
+            {
+              "name": "job-title",
+              "value": "Individual's Title"
+            }
+          ],
+          "email-addresses": [
+            "person@ica.example.org"
+          ],
+          "telephone-numbers": [
+            {
+              "number": "2025551212"
+            }
+          ],
+          "member-of-organizations": [
+            "80361ec4-bfce-4b5c-85c8-313d6ebd220b"
+          ]
+        },
+        {
+          "uuid": "f0bc13a4-3303-47dd-80d3-380e159c8362",
+          "type": "organization",
+          "name": "[SAMPLE]Example IaaS Provider",
+          "short-name": "E.I.P.",
+          "remarks": "Underlying service provider. Leveraged Authorization."
+        },
+        {
+          "uuid": "3360e343-9860-4bda-9dfc-ff427c3dfab6",
+          "type": "person",
+          "name": "[SAMPLE]Person Name 1",
+          "props": [
+            {
+              "name": "job-title",
+              "value": "Individual's Title"
+            },
+            {
+              "name": "mail-stop",
+              "value": "Mailstop A-1"
+            }
+          ],
+          "email-addresses": [
+            "name@example.com"
+          ],
+          "telephone-numbers": [
+            {
+              "number": "2020000001"
+            }
+          ],
+          "location-uuids": [
+            "27b78960-59ef-4619-82b0-ae20b9c709ac"
+          ],
+          "member-of-organizations": [
+            "6b286b5d-8f07-4fa7-8847-1dd0d88f73fb"
+          ]
+        },
+        {
+          "uuid": "36b8d6c0-3b25-42cc-b529-cf4066145cdd",
+          "type": "person",
+          "name": "[SAMPLE]Person Name 2",
+          "props": [
+            {
+              "name": "job-title",
+              "value": "Individual's Title"
+            }
+          ],
+          "email-addresses": [
+            "name@example.com"
+          ],
+          "telephone-numbers": [
+            {
+              "number": "2020000002"
+            }
+          ],
+          "addresses": [
+            {
+              "type": "work",
+              "addr-lines": [
+                "Address Line"
+              ],
+              "city": "City",
+              "state": "ST",
+              "postal-code": "00000",
+              "country": "US"
+            }
+          ],
+          "member-of-organizations": [
+            "6b286b5d-8f07-4fa7-8847-1dd0d88f73fb"
+          ]
+        },
+        {
+          "uuid": "0cec09d9-20c6-470b-9ffc-85763375880b",
+          "type": "person",
+          "name": "[SAMPLE]Person Name 3",
+          "props": [
+            {
+              "name": "job-title",
+              "value": "Individual's Title"
+            }
+          ],
+          "email-addresses": [
+            "name@example.com"
+          ],
+          "telephone-numbers": [
+            {
+              "number": "2020000003"
+            }
+          ],
+          "addresses": [
+            {
+              "type": "work",
+              "addr-lines": [
+                "Address Line"
+              ],
+              "city": "City",
+              "state": "ST",
+              "postal-code": "00000",
+              "country": "US"
+            }
+          ],
+          "member-of-organizations": [
+            "6b286b5d-8f07-4fa7-8847-1dd0d88f73fb"
+          ]
+        },
+        {
+          "uuid": "f75e21f6-43d8-46ab-890d-7f2eebc5a830",
+          "type": "person",
+          "name": "[SAMPLE]Person Name 4",
+          "props": [
+            {
+              "name": "job-title",
+              "value": "Individual's Title"
+            }
+          ],
+          "email-addresses": [
+            "name@example.com"
+          ],
+          "telephone-numbers": [
+            {
+              "number": "2020000004"
+            }
+          ],
+          "addresses": [
+            {
+              "type": "work",
+              "addr-lines": [
+                "Address Line"
+              ],
+              "city": "City",
+              "state": "ST",
+              "postal-code": "00000",
+              "country": "US"
+            }
+          ],
+          "member-of-organizations": [
+            "6b286b5d-8f07-4fa7-8847-1dd0d88f73fb"
+          ]
+        },
+        {
+          "uuid": "132953a9-640c-46f7-9de9-3fa15ec99361",
+          "type": "person",
+          "name": "[SAMPLE]Person Name 5",
+          "props": [
+            {
+              "name": "job-title",
+              "value": "Individual's Title"
+            }
+          ],
+          "email-addresses": [
+            "name@example.com"
+          ],
+          "telephone-numbers": [
+            {
+              "number": "2020000005"
+            }
+          ],
+          "addresses": [
+            {
+              "type": "work",
+              "addr-lines": [
+                "Address Line"
+              ],
+              "city": "City",
+              "state": "ST",
+              "postal-code": "00000",
+              "country": "US"
+            }
+          ],
+          "member-of-organizations": [
+            "6b286b5d-8f07-4fa7-8847-1dd0d88f73fb"
+          ]
+        },
+        {
+          "uuid": "4fded5fd-7a65-47ea-bd76-df57c46e27d1",
+          "type": "person",
+          "name": "[SAMPLE]Person Name 6",
+          "props": [
+            {
+              "name": "job-title",
+              "value": "Individual's Title"
+            }
+          ],
+          "email-addresses": [
+            "name@example.com"
+          ],
+          "telephone-numbers": [
+            {
+              "number": "2020000006"
+            }
+          ],
+          "addresses": [
+            {
+              "type": "work",
+              "addr-lines": [
+                "Address Line"
+              ],
+              "city": "City",
+              "state": "ST",
+              "postal-code": "00000",
+              "country": "US"
+            }
+          ],
+          "member-of-organizations": [
+            "78992555-4a99-4eaa-868c-f2c249679dd3"
+          ]
+        },
+        {
+          "uuid": "db234cb7-1776-425c-9ac4-b067c1723011",
+          "type": "person",
+          "name": "[SAMPLE]Person Name 7",
+          "props": [
+            {
+              "name": "job-title",
+              "value": "Individual's Title"
+            }
+          ],
+          "email-addresses": [
+            "name@example.com"
+          ],
+          "telephone-numbers": [
+            {
+              "number": "2020000007"
+            }
+          ],
+          "addresses": [
+            {
+              "type": "work",
+              "addr-lines": [
+                "Address Line"
+              ],
+              "city": "City",
+              "state": "ST",
+              "postal-code": "00000",
+              "country": "US"
+            }
+          ],
+          "member-of-organizations": [
+            "6b286b5d-8f07-4fa7-8847-1dd0d88f73fb"
+          ]
+        },
+        {
+          "uuid": "b306f5af-b93a-4a7f-a2b2-37a44fc92a79",
+          "type": "organization",
+          "name": "[SAMPLE] IT Department"
+        },
+        {
+          "uuid": "59cdc953-5902-4fa4-a878-f3163854624c",
+          "type": "organization",
+          "name": "[SAMPLE]Security Team"
+        }
+      ],
+      "responsible-parties": [
+        {
+          "role-id": "cloud-service-provider",
+          "party-uuids": [
+            "6b286b5d-8f07-4fa7-8847-1dd0d88f73fb"
+          ],
+          "remarks": "Exactly one"
+        },
+        {
+          "role-id": "prepared-by",
+          "party-uuids": [
+            "3360e343-9860-4bda-9dfc-ff427c3dfab6"
+          ],
+          "remarks": "Exactly one"
+        },
+        {
+          "role-id": "prepared-for",
+          "party-uuids": [
+            "6b286b5d-8f07-4fa7-8847-1dd0d88f73fb"
+          ]
+        },
+        {
+          "role-id": "content-approver",
+          "party-uuids": [
+            "3360e343-9860-4bda-9dfc-ff427c3dfab6",
+            "36b8d6c0-3b25-42cc-b529-cf4066145cdd"
+          ],
+          "remarks": "One or more"
+        },
+        {
+          "role-id": "system-owner",
+          "party-uuids": [
+            "3360e343-9860-4bda-9dfc-ff427c3dfab6"
+          ],
+          "remarks": "Exactly one"
+        },
+        {
+          "role-id": "authorizing-official",
+          "party-uuids": [
+            "49017ec3-9f51-4dbd-9253-858c2b1295fd",
+            "4fded5fd-7a65-47ea-bd76-df57c46e27d1"
+          ],
+          "remarks": "One or more"
+        },
+        {
+          "role-id": "system-poc-management",
+          "party-uuids": [
+            "0cec09d9-20c6-470b-9ffc-85763375880b"
+          ],
+          "remarks": "Exactly one"
+        },
+        {
+          "role-id": "system-poc-technical",
+          "party-uuids": [
+            "f75e21f6-43d8-46ab-890d-7f2eebc5a830"
+          ],
+          "remarks": "Exactly one"
+        },
+        {
+          "role-id": "information-system-security-officer",
+          "party-uuids": [
+            "132953a9-640c-46f7-9de9-3fa15ec99361"
+          ],
+          "remarks": "Exactly one"
+        },
+        {
+          "role-id": "authorizing-official-poc",
+          "party-uuids": [
+            "4fded5fd-7a65-47ea-bd76-df57c46e27d1"
+          ],
+          "remarks": "Exactly one"
+        },
+        {
+          "role-id": "privacy-poc",
+          "party-uuids": [
+            "db234cb7-1776-425c-9ac4-b067c1723011"
+          ],
+          "remarks": "Exactly one"
+        },
+        {
+          "role-id": "fedramp-pmo",
+          "party-uuids": [
+            "77e0e2c8-2560-4fe9-ac78-c3ff4ffc9f6d"
+          ],
+          "remarks": "Exactly one"
+        },
+        {
+          "role-id": "fedramp-jab",
+          "party-uuids": [
+            "49017ec3-9f51-4dbd-9253-858c2b1295fd"
+          ],
+          "remarks": "Exactly one"
+        }
+      ],
+      "remarks": "This OSCAL-based FedRAMP SSP Template can be used for the FedRAMP Low, Moderate, and High baselines.\n\nGuidance for OSCAL-based FedRAMP Tailored Low Impact - Software as a Service (LI-SaaS) content has not yet been developed."
+    },
+    "import-profile": {
+      "href": "https://raw.githubusercontent.com/GSA/fedramp-automation/5f44c1b09af13d203f008be6bd33603ad7cb0202/dist/content/rev5/baselines/json/FedRAMP_rev5_MODERATE-baseline-resolved-profile_catalog.json",
+      "remarks": "This example points to the FedRAMP Rev 5 Moderate baseline that is part of the official FedRAMP 1.0.4 release.\n\nMust adjust accordingly for applicable baseline and revision."
+    },
+    "system-characteristics": {
+      "system-ids": [
+        {
+          "identifier-type": "https://fedramp.gov",
+          "id": "F00000000"
+        }
+      ],
+      "system-name": "System's Full Name",
+      "system-name-short": "System's Short Name or Acronym",
+      "description": "[Insert CSO Name] is delivered as [a/an] [insert based on the Service Model above] offering using a multi-tenant [insert based on the Deployment Model above] cloud computing environment. It is available to [Insert scope of customers in accordance with instructions above (for example, the public, federal, state, local, and tribal governments, as well as research institutions, federal contractors, government contractors etc.)].\n\nNOTE: Additional description, including the purpose and functions of this system may be added here. This includes any narrative text usually included in section 9.1 of the SSP.\n\nNOTE: The description is expected to be at least 32 words in length.",
+      "props": [
+        {
+          "name": "cloud-service-model",
+          "value": "saas",
+          "remarks": "Remarks are required if service model is \\\"other\\\". Optional otherwise."
+        },
+        {
+          "name": "cloud-deployment-model",
+          "value": "government-only-cloud",
+          "remarks": "Remarks are required if deployment model is \\\"hybrid-cloud\\\" or \\\"other\\\". Optional otherwise."
+        },
+        {
+          "name": "identity-assurance-level",
+          "value": "2"
+        },
+        {
+          "name": "authenticator-assurance-level",
+          "value": "2"
+        },
+        {
+          "name": "federation-assurance-level",
+          "value": "2"
+        },
+        {
+          "name": "fully-operational-date",
+          "ns": "https://fedramp.gov/ns/oscal",
+          "value": "yyyy-mm-ddThh:mmZ"
+        },
+        {
+          "name": "authorization-type",
+          "ns": "https://fedramp.gov/ns/oscal",
+          "value": "fedramp-agency"
+        }
+      ],
+      "security-sensitivity-level": "fips-199-moderate",
+      "system-information": {
+        "information-types": [
+          {
+            "uuid": "06ecba4f-db96-4491-a3a2-7febfa227435",
+            "title": "Information Type Name",
+            "description": "A description of the information.",
+            "categorizations": [
+              {
+                "system": "https://doi.org/10.6028/NIST.SP.800-60v2r1",
+                "information-type-ids": [
+                  "C.2.4.1"
+                ]
+              }
+            ],
+            "confidentiality-impact": {
+              "base": "fips-199-moderate",
+              "selected": "fips-199-moderate",
+              "adjustment-justification": "Required if the base and selected values do not match."
+            },
+            "integrity-impact": {
+              "base": "fips-199-moderate",
+              "selected": "fips-199-moderate",
+              "adjustment-justification": "Required if the base and selected values do not match."
+            },
+            "availability-impact": {
+              "base": "fips-199-moderate",
+              "selected": "fips-199-moderate",
+              "adjustment-justification": "Required if the base and selected values do not match."
+            }
+          }
+        ]
+      },
+      "security-impact-level": {
+        "security-objective-confidentiality": "fips-199-moderate",
+        "security-objective-integrity": "fips-199-moderate",
+        "security-objective-availability": "fips-199-moderate"
+      },
+      "status": {
+        "state": "operational",
+        "remarks": "Remarks are optional if status/state is \\\"operational\\\".\n\nRemarks are required otherwise."
+      },
+      "authorization-boundary": {
+        "description": "A holistic, top-level explanation of the FedRAMP authorization boundary.",
+        "diagrams": [
+          {
+            "uuid": "dbf46c27-52a9-49c4-beb6-b6399cd75497",
+            "description": "A diagram-specific explanation.",
+            "links": [
+              {
+                "href": "#d2eb3c18-6754-4e3a-a933-03d289e3fad5",
+                "rel": "diagram"
+              }
+            ],
+            "caption": "Authorization Boundary Diagram"
+          }
+        ]
+      },
+      "network-architecture": {
+        "description": "A holistic, top-level explanation of the network architecture.",
+        "diagrams": [
+          {
+            "uuid": "e97c3395-433a-48c1-8cc7-dd1e1555941c",
+            "description": "A diagram-specific explanation.",
+            "links": [
+              {
+                "href": "#61081e81-850b-43c1-bf43-1ecbddcb9e7f",
+                "rel": "diagram"
+              }
+            ],
+            "caption": "Network Diagram"
+          }
+        ]
+      },
+      "data-flow": {
+        "description": "A holistic, top-level explanation of the system's data flows.",
+        "diagrams": [
+          {
+            "uuid": "e3b98448-4219-46a5-b229-412423c566f3",
+            "description": "A diagram-specific explanation.",
+            "links": [
+              {
+                "href": "#ac5d7535-f3b8-45d3-bf3b-735c82c64547",
+                "rel": "diagram"
+              }
+            ],
+            "caption": "Data Flow Diagram"
+          }
+        ]
+      }
+    },
+    "system-implementation": {
+      "props": [
+        {
+          "name": "users-internal",
+          "ns": "https://fedramp.gov/ns/oscal",
+          "value": "0"
+        },
+        {
+          "name": "users-external",
+          "ns": "https://fedramp.gov/ns/oscal",
+          "value": "0"
+        },
+        {
+          "name": "users-internal-future",
+          "ns": "https://fedramp.gov/ns/oscal",
+          "value": "0"
+        },
+        {
+          "name": "users-external-future",
+          "ns": "https://fedramp.gov/ns/oscal",
+          "value": "0"
+        }
+      ],
+      "leveraged-authorizations": [
+        {
+          "uuid": "5a9c98ab-8e5e-433d-a7bd-515c07cd1497",
+          "title": "GovCloud",
+          "props": [
+            {
+              "name": "leveraged-system-identifier",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "F1603047866"
+            },
+            {
+              "name": "authorization-type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "fedramp-agency"
+            },
+            {
+              "name": "impact-level",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "moderate"
+            }
+          ],
+          "links": [
+            {
+              "href": "//path/to/leveraged_system_ssp.json"
+            },
+            {
+              "href": "//path/to/leveraged_system_legacy_crm.xslt"
+            },
+            {
+              "href": "//path/to/leveraged_system_responsibility_and_inheritance.json"
+            }
+          ],
+          "party-uuid": "f0bc13a4-3303-47dd-80d3-380e159c8362",
+          "date-authorized": "2015-01-01",
+          "remarks": "Use one leveraged-authorization assembly for each underlying system. In the legacy world, these may be general support systems.\n\nThe link fields are optional, but preferred when known. Often, a leveraging system's SSP author will not have access to the leveraged system's SSP, but should have access to the leveraged system's CRM."
+        }
+      ],
+      "users": [
+        {
+          "uuid": "9cb0fab0-78bd-44ba-bcb8-3e9801cc952f",
+          "title": "[SAMPLE]Unix System Administrator",
+          "props": [
+            {
+              "name": "sensitivity",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "high-risk"
+            },
+            {
+              "name": "privilege-level",
+              "value": "privileged"
+            },
+            {
+              "name": "authentication-method",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "multi-factor OTP device"
+            },
+            {
+              "name": "type",
+              "value": "internal"
+            }
+          ],
+          "role-ids": [
+            "admin-unix"
+          ],
+          "authorized-privileges": [
+            {
+              "title": "Full administrative access (root)",
+              "functions-performed": [
+                "Add/remove users and hardware",
+                "install and configure software",
+                "OS updates, patches and hotfixes",
+                "perform backups"
+              ]
+            }
+          ]
+        },
+        {
+          "uuid": "16ec71e7-025c-43e4-9d3f-3acb485fac2e",
+          "title": "[SAMPLE]Client Administrator",
+          "props": [
+            {
+              "name": "sensitivity",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "moderate"
+            },
+            {
+              "name": "privilege-level",
+              "value": "non-privileged"
+            },
+            {
+              "name": "authentication-method",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "memorized seccret plus SF OTP device"
+            },
+            {
+              "name": "type",
+              "value": "external"
+            }
+          ],
+          "role-ids": [
+            "admin-client"
+          ],
+          "authorized-privileges": [
+            {
+              "title": "Portal administration",
+              "functions-performed": [
+                "Add/remove client users",
+                "Create, modify and delete client applications"
+              ]
+            }
+          ]
+        },
+        {
+          "uuid": "ba7708c1-4041-48ab-9b7b-1ddb5e175fe0",
+          "title": "[SAMPLE]Program Director",
+          "props": [
+            {
+              "name": "sensitivity",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "limited"
+            },
+            {
+              "name": "privilege-level",
+              "value": "no-logical-access"
+            },
+            {
+              "name": "authentication-method",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            },
+            {
+              "name": "type",
+              "value": "internal"
+            }
+          ],
+          "role-ids": [
+            "information-system-security-officer",
+            "isa-poc-local",
+            "isa-authorizing-official-local"
+          ],
+          "authorized-privileges": [
+            {
+              "title": "Administrative Access Approver",
+              "functions-performed": [
+                "Approves access requests for administrative accounts."
+              ]
+            },
+            {
+              "title": "Access Approver",
+              "functions-performed": [
+                "Approves access requests for administrative accounts."
+              ]
+            }
+          ]
+        },
+        {
+          "uuid": "73ae456f-5581-4ff7-9ada-49fc057b2e0b",
+          "title": "[SAMPLE]ISA POC",
+          "props": [
+            {
+              "name": "sensitivity",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            },
+            {
+              "name": "privilege-level",
+              "value": "no-logical-access"
+            },
+            {
+              "name": "authentication-method",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            },
+            {
+              "name": "type",
+              "value": "external"
+            }
+          ],
+          "role-ids": [
+            "isa-poc-remote",
+            "isa-authorizing-official-remote"
+          ],
+          "authorized-privileges": [
+            {
+              "title": "External System Access Provider",
+              "functions-performed": [
+                "Authorizes access to external interconnected system."
+              ]
+            }
+          ]
+        }
+      ],
+      "components": [
+        {
+          "uuid": "60f92bcf-f353-4236-9803-2a5d417555f4",
+          "type": "this-system",
+          "title": "This System",
+          "description": "The entire system as depicted in the system authorization boundary\n\nEmail is employed",
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "95beec7e-6f82-4aaa-8211-969cd7c1f1ab",
+          "type": "validation",
+          "title": "[SAMPLE]Cryptographic Module Name",
+          "description": "Provide a description and any pertinent note regarding the use of this CM.\n\nFor data-at-rest modules, describe type of encryption implemented (e.g., full disk, file, record-level, etc.)\n\nLastly, provide any supporting notes on FIPS status (e.g. historical) or lack of FIPS compliance (e.g., Module in Process).",
+          "props": [
+            {
+              "name": "asset-type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "cryptographic-module"
+            },
+            {
+              "name": "vendor-name",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "CM Vendor"
+            },
+            {
+              "name": "cryptographic-module-usage",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "data-at-rest"
+            },
+            {
+              "name": "validation-type",
+              "value": "fips-140-2"
+            },
+            {
+              "name": "validation-reference",
+              "value": "3928"
+            }
+          ],
+          "links": [
+            {
+              "href": "https://csrc.nist.gov/projects/cryptographic-module-validation-program/Certificate/3928",
+              "rel": "validation-details"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "1eaaabbd-b3a6-4316-a868-7b815e7c40f5",
+          "type": "validation",
+          "title": "[SAMPLE]Cryptographic Module Name",
+          "description": "Provide a description and any pertinent note regarding the use of this CM.\n\nFor example, any supporting notes on FIPS status (e.g. historical) or lack of FIPS compliance (e.g., Module in Process).",
+          "props": [
+            {
+              "name": "asset-type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "cryptographic-module"
+            },
+            {
+              "name": "vendor-name",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "CM Vendor"
+            },
+            {
+              "name": "cryptographic-module-usage",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "data-in-transit"
+            },
+            {
+              "name": "validation-type",
+              "value": "fips-140-3"
+            },
+            {
+              "name": "validation-reference",
+              "value": "3920"
+            }
+          ],
+          "links": [
+            {
+              "href": "https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/3920",
+              "rel": "validation-details"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "e82e6e07-0c62-417e-8a19-3744991b4c65",
+          "type": "leveraged-system",
+          "title": "Name of Leveraged System",
+          "description": "If the leveraged system owner provides a UUID for their system (such as in an OSCAL-based CRM), it should be reflected in the `inherited-uuid` property.\n\nMust include all leveraged services and features from the leveraged authorization here.",
+          "props": [
+            {
+              "name": "asset-type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "paas"
+            },
+            {
+              "name": "isa-title",
+              "value": "system interconnection agreement"
+            },
+            {
+              "name": "isa-date",
+              "value": "2023-01-01T00:00:00Z"
+            },
+            {
+              "name": "nature-of-agreement",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "SLA"
+            },
+            {
+              "name": "ipv4-address",
+              "value": "172.0.0.0"
+            },
+            {
+              "name": "ipv6-address",
+              "value": "::"
+            },
+            {
+              "name": "direction",
+              "value": "incoming"
+            },
+            {
+              "name": "information",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "describe information being transferred"
+            },
+            {
+              "name": "interconnection-data-type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "C.3.5.1",
+              "class": "fedramp"
+            },
+            {
+              "name": "interconnection-data-type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "C.3.5.8",
+              "class": "fedramp"
+            },
+            {
+              "name": "leveraged-authorization-uuid",
+              "value": "5a9c98ab-8e5e-433d-a7bd-515c07cd1497"
+            },
+            {
+              "name": "implementation-point",
+              "value": "external"
+            },
+            {
+              "name": "inherited-uuid",
+              "value": "11111111-0000-4000-9001-000000000001"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "77A1614A-57B3-4B32-9FEE-613A6520EC58",
+          "type": "service",
+          "title": "Service Provided by Leveraged System",
+          "description": "If the leveraged system owner provides a UUID for their service (such as in an OSCAL-based CRM), it should be reflected in the `inherited-uuid` property.\n\nMust include all leveraged services and features from the leveraged authorization here.",
+          "props": [
+            {
+              "name": "leveraged-authorization-uuid",
+              "value": "5a9c98ab-8e5e-433d-a7bd-515c07cd1497"
+            },
+            {
+              "name": "implementation-point",
+              "value": "external"
+            },
+            {
+              "name": "inherited-uuid",
+              "value": "11111111-0000-4000-9001-000000000002"
+            }
+          ],
+          "links": [
+            {
+              "href": "60f92bcf-f353-4236-9803-2a5d417555f4",
+              "rel": "used-by"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "2812ef51-61e7-4505-afbb-da5a073a2a5c",
+          "type": "interconnection",
+          "title": "[EXAMPLE]Authorized Connection Information System Name",
+          "description": "Describe the purpose of the external system/service; specifically, provide reasons for connectivity (e.g., system monitoring, system alerting, download updates, etc.).",
+          "props": [
+            {
+              "name": "service-processor",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "[SAMPLE] Telco Name"
+            },
+            {
+              "name": "interconnection-type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "1"
+            },
+            {
+              "name": "nature-of-agreement",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Contract"
+            },
+            {
+              "name": "still-supported",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "yes"
+            },
+            {
+              "name": "interconnection-data-type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "C.3.5.1",
+              "class": "fedramp"
+            },
+            {
+              "name": "interconnection-data-type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "C.3.5.8",
+              "class": "fedramp"
+            },
+            {
+              "name": "interconnection-data-categorization",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "low",
+              "class": "C.3.5.1"
+            },
+            {
+              "name": "interconnection-data-categorization",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "moderate",
+              "class": "C.3.5.8"
+            },
+            {
+              "name": "authorized-users",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "SecOps engineers"
+            },
+            {
+              "name": "interconnection-compliance",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "PCI SOC 2",
+              "class": "fedramp"
+            },
+            {
+              "name": "interconnection-compliance",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "ISO/IEC 27001",
+              "class": "fedramp"
+            },
+            {
+              "name": "interconnection-hosting-environment",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "PaaS"
+            },
+            {
+              "name": "interconnection-risk",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "None"
+            },
+            {
+              "name": "isa-title",
+              "value": "system interconnection agreement"
+            },
+            {
+              "name": "isa-date",
+              "value": "2023-01-01T00:00:00Z"
+            },
+            {
+              "name": "ipv4-address",
+              "value": "10.1.1.1",
+              "class": "local"
+            },
+            {
+              "name": "ipv4-address",
+              "value": "10.2.2.2",
+              "class": "remote"
+            },
+            {
+              "name": "ipv6-address",
+              "value": "::ffff:10.2.2.2"
+            },
+            {
+              "name": "direction",
+              "value": "incoming"
+            },
+            {
+              "name": "direction",
+              "value": "outgoing"
+            },
+            {
+              "name": "information",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Describe the information being transmitted."
+            },
+            {
+              "name": "port",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "80",
+              "class": "remote"
+            },
+            {
+              "name": "interconnection-security",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "ipsec",
+              "remarks": "If \\\"other\\\", remarks are required. Optional otherwise."
+            }
+          ],
+          "links": [
+            {
+              "href": "#9d6cf2b4-8e88-4040-a33c-7bc206553a1a",
+              "rel": "isa-agreement"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          },
+          "responsible-roles": [
+            {
+              "role-id": "isa-poc-remote",
+              "party-uuids": [
+                "09ad840f-aa79-43aa-9f22-25182c2ab11b"
+              ]
+            },
+            {
+              "role-id": "isa-poc-local",
+              "party-uuids": [
+                "09ad840f-aa79-43aa-9f22-25182c2ab11b"
+              ]
+            },
+            {
+              "role-id": "isa-authorizing-official-remote",
+              "party-uuids": [
+                "09ad840f-aa79-43aa-9f22-25182c2ab11b"
+              ]
+            },
+            {
+              "role-id": "isa-authorizing-official-local",
+              "party-uuids": [
+                "09ad840f-aa79-43aa-9f22-25182c2ab11b"
+              ]
+            }
+          ],
+          "remarks": "Optional notes about this interconnection"
+        },
+        {
+          "uuid": "05ceb8df-52e7-49db-9719-891723f366bd",
+          "type": "software",
+          "title": "[SAMPLE]Product Name",
+          "description": "FUNCTION: Describe typical component function.",
+          "props": [
+            {
+              "name": "asset-type",
+              "value": "operating-system"
+            },
+            {
+              "name": "scan-type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "infrastructure"
+            },
+            {
+              "name": "vendor-name",
+              "value": "Vendor Name"
+            },
+            {
+              "name": "model",
+              "value": "Model Number"
+            },
+            {
+              "name": "version",
+              "value": "Version Number"
+            },
+            {
+              "name": "patch-level",
+              "value": "Patch Level"
+            }
+          ],
+          "links": [
+            {
+              "href": "#95beec7e-6f82-4aaa-8211-969cd7c1f1ab",
+              "rel": "validation"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          },
+          "responsible-roles": [
+            {
+              "role-id": "admin-unix",
+              "party-uuids": [
+                "3360e343-9860-4bda-9dfc-ff427c3dfab6"
+              ]
+            }
+          ],
+          "remarks": "COMMENTS: Provide other comments as needed."
+        },
+        {
+          "uuid": "1541015b-6d19-42cb-a991-624cc082ed4d",
+          "type": "hardware",
+          "title": "[SAMPLE]Product",
+          "description": "FUNCTION: Describe typical component function.",
+          "props": [
+            {
+              "name": "asset-type",
+              "value": "database"
+            },
+            {
+              "name": "scan-type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "infrastructure"
+            },
+            {
+              "name": "scan-type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "database"
+            },
+            {
+              "name": "vendor-name",
+              "value": "Vendor Name"
+            },
+            {
+              "name": "model",
+              "value": "Model Number"
+            },
+            {
+              "name": "version",
+              "value": "Version Number"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          },
+          "responsible-roles": [
+            {
+              "role-id": "asset-administrator",
+              "party-uuids": [
+                "b306f5af-b93a-4a7f-a2b2-37a44fc92a79"
+              ]
+            },
+            {
+              "role-id": "asset-owner",
+              "party-uuids": [
+                "36b8d6c0-3b25-42cc-b529-cf4066145cdd"
+              ]
+            }
+          ],
+          "remarks": "COMMENTS: Provide other comments as needed."
+        },
+        {
+          "uuid": "6617f60b-8bac-422d-9939-94f43ddc0f7a",
+          "type": "software",
+          "title": "OS Sample",
+          "description": "None",
+          "props": [
+            {
+              "name": "asset-type",
+              "value": "operating-system"
+            },
+            {
+              "name": "scan-type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "infrastructure"
+            },
+            {
+              "name": "baseline-configuration-name",
+              "value": "Baseline Config. Name"
+            },
+            {
+              "name": "allows-authenticated-scan",
+              "value": "yes"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "120f1404-7c9f-4856-a247-63bd89d9e769",
+          "type": "software",
+          "title": "Database Sample",
+          "description": "None",
+          "props": [
+            {
+              "name": "asset-type",
+              "value": "database"
+            },
+            {
+              "name": "scan-type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "database"
+            },
+            {
+              "name": "baseline-configuration-name",
+              "value": "Baseline Config. Name"
+            },
+            {
+              "name": "allows-authenticated-scan",
+              "value": "yes"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "8f230d84-2f9b-44a3-acdb-019566ab2554",
+          "type": "software",
+          "title": "Appliance Sample",
+          "description": "None",
+          "props": [
+            {
+              "name": "asset-type",
+              "value": "appliance"
+            },
+            {
+              "name": "scan-type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "web"
+            },
+            {
+              "name": "login-url",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "https://admin.offering.com/login"
+            },
+            {
+              "name": "baseline-configuration-name",
+              "value": "Baseline Config. Name"
+            },
+            {
+              "name": "allows-authenticated-scan",
+              "value": "no",
+              "remarks": "Vendor appliance. No admin-level access."
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "88b8d7bb-ba23-4430-bf62-028eab822050",
+          "type": "policy",
+          "title": "[EXAMPLE]Policies",
+          "description": "[EXAMPLE]component representing a collection of policies in appendix A.",
+          "links": [
+            {
+              "href": "#330bac69-5840-479a-981b-afda037d7a6f",
+              "rel": "policy"
+            },
+            {
+              "href": "#184d2fc9-6c9e-4302-acb3-8c24f6843c79",
+              "rel": "policy"
+            },
+            {
+              "href": "#64977a9e-cd62-4c04-891e-7943e9046179",
+              "rel": "policy"
+            },
+            {
+              "href": "#f81fe324-844f-4b53-b915-8c72b6fde8cf",
+              "rel": "policy"
+            },
+            {
+              "href": "#eb4467a5-c3ca-4cac-9181-557886d7d1dc",
+              "rel": "policy"
+            },
+            {
+              "href": "#4c4395c5-a126-4b77-8c62-cac98c563915",
+              "rel": "policy"
+            },
+            {
+              "href": "#f6070655-ac54-4c4c-847e-d073bcf23baf",
+              "rel": "policy"
+            },
+            {
+              "href": "#e39a9f53-984b-429f-a062-a815228c6687",
+              "rel": "policy"
+            },
+            {
+              "href": "#8b009787-771c-4b02-9a8f-3f3b581e9464",
+              "rel": "policy"
+            },
+            {
+              "href": "#776b9f3b-2896-4118-87d9-7a5e62149afb",
+              "rel": "policy"
+            },
+            {
+              "href": "#a54bc32c-6bae-4c89-b5b4-9299c56893fb",
+              "rel": "policy"
+            },
+            {
+              "href": "#9de28452-4b02-4b49-b316-59142a7633c1",
+              "rel": "policy"
+            },
+            {
+              "href": "#34f3388e-e5b2-4d85-b050-19f62dba6d7e",
+              "rel": "policy"
+            },
+            {
+              "href": "#53fbc1b6-0f3c-4298-9554-da5acfef3a5a",
+              "rel": "policy"
+            },
+            {
+              "href": "#f969f849-8920-4325-9abe-dcc7133518d6",
+              "rel": "policy"
+            },
+            {
+              "href": "#03ae437f-fffc-48e3-81f1-4040fce2d6e3",
+              "rel": "policy"
+            },
+            {
+              "href": "#7a5ee0b7-402c-487f-8ac7-e1735b991674",
+              "rel": "policy"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          },
+          "remarks": "Links to the components, attached as a `resource` in `back-matter`."
+        },
+        {
+          "uuid": "fa90644a-8bf8-47da-b0d3-82bffc708afc",
+          "type": "procedure",
+          "title": "[EXAMPLE]Procedures",
+          "description": "[EXAMPLE]component representing a collection of procedures in appendix A.",
+          "links": [
+            {
+              "href": "#e1fa7a30-efb8-4738-b4e2-7fbeb86644cd",
+              "rel": "procedure"
+            },
+            {
+              "href": "#ce9f3af2-f4bc-47b5-bc25-df52a917748b",
+              "rel": "procedure"
+            },
+            {
+              "href": "#b1cdaad8-2127-4563-b248-3d2777307c4f",
+              "rel": "procedure"
+            },
+            {
+              "href": "#a552272e-803c-40db-895c-5de35c76d871",
+              "rel": "procedure"
+            },
+            {
+              "href": "#b4c87da0-0f96-4231-a3c1-2d1a9d0b99a3",
+              "rel": "procedure"
+            },
+            {
+              "href": "#2f1cb360-a743-4ebe-915a-27f215f44dc5",
+              "rel": "procedure"
+            },
+            {
+              "href": "#08a6ab70-8c56-4713-ae9c-81fbb6594943",
+              "rel": "procedure"
+            },
+            {
+              "href": "#649eac51-c21b-4cb2-bd10-7828e0522e50",
+              "rel": "procedure"
+            },
+            {
+              "href": "#fd29a63b-2a08-4d56-b91e-aadfa4c0f55b",
+              "rel": "procedure"
+            },
+            {
+              "href": "#908175c9-7502-4ab4-b469-80450ed18a8b",
+              "rel": "procedure"
+            },
+            {
+              "href": "#22522abe-fd09-4476-b09f-c6422b72bf12",
+              "rel": "procedure"
+            },
+            {
+              "href": "#937dfbb6-9d82-4974-be85-23f1e4b130d8",
+              "rel": "procedure"
+            },
+            {
+              "href": "#552dec25-74a9-4cbe-b3b0-f865d99bfa9d",
+              "rel": "procedure"
+            },
+            {
+              "href": "#1a852337-d28f-4a66-a367-68aebec35698",
+              "rel": "procedure"
+            },
+            {
+              "href": "#4a59a06d-3b1b-410f-b067-3fe1dab083f2",
+              "rel": "procedure"
+            },
+            {
+              "href": "#936093ce-a567-4592-8fcc-eeeef024cdd4",
+              "rel": "procedure"
+            },
+            {
+              "href": "#ac953d62-a392-499f-b832-b90b325cceb6",
+              "rel": "procedure"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          },
+          "remarks": "Links to the components, attached as a `resource` in `back-matter`."
+        },
+        {
+          "uuid": "d5841417-de4c-4d84-ab3c-39dd1fd32a96",
+          "type": "service",
+          "title": "[SAMPLE]Service Name",
+          "description": "Describe the service",
+          "purpose": "Describe the reason the service is needed.",
+          "links": [
+            {
+              "href": "60f92bcf-f353-4236-9803-2a5d417555f4",
+              "rel": "used-by"
+            },
+            {
+              "href": "77A1614A-57B3-4B32-9FEE-613A6520EC58",
+              "rel": "provided-by"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          },
+          "protocols": [
+            {
+              "uuid": "653ad9b9-9c78-4bc0-8a93-6ebd3c0fce54",
+              "name": "http",
+              "port-ranges": [
+                {
+                  "start": 80,
+                  "end": 80,
+                  "transport": "TCP"
+                }
+              ]
+            },
+            {
+              "uuid": "3ac9b137-479e-47d4-bc7e-aaa97c76aa63",
+              "name": "https",
+              "port-ranges": [
+                {
+                  "start": 443,
+                  "end": 443,
+                  "transport": "TCP"
+                }
+              ]
+            }
+          ],
+          "remarks": "Section 10.2, Table 10-1. Ports, Protocols and Services\n\n **SERVICES ARE NOW COMPONENTS WITH type='service'** "
+        },
+        {
+          "uuid": "2812ef51-61e7-4505-afbb-da5a073a2a5b",
+          "type": "interconnection",
+          "title": "[EXAMPLE]Authorized Connection Information System Name",
+          "description": "Briefly describe the interconnection.",
+          "props": [
+            {
+              "name": "service-processor",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "[SAMPLE] Telco Name"
+            },
+            {
+              "name": "ipv4-address",
+              "value": "10.1.1.1",
+              "class": "local"
+            },
+            {
+              "name": "ipv4-address",
+              "value": "10.2.2.2",
+              "class": "remote"
+            },
+            {
+              "name": "ipv6-address",
+              "value": "2001:0000:0000:0000:0000:ffff:0a02:0202"
+            },
+            {
+              "name": "direction",
+              "value": "incoming"
+            },
+            {
+              "name": "direction",
+              "value": "outgoing"
+            },
+            {
+              "name": "information",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Describe the information being transmitted."
+            },
+            {
+              "name": "port",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "80",
+              "class": "remote"
+            },
+            {
+              "name": "interconnection-security",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "ipsec",
+              "remarks": "If \\\"other\\\", remarks are required. Optional otherwise."
+            }
+          ],
+          "links": [
+            {
+              "href": "#9d6cf2b4-8e88-4040-a33c-7bc206553a1a",
+              "rel": "isa-agreement"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          },
+          "responsible-roles": [
+            {
+              "role-id": "isa-poc-remote",
+              "party-uuids": [
+                "09ad840f-aa79-43aa-9f22-25182c2ab11b"
+              ]
+            },
+            {
+              "role-id": "isa-poc-local",
+              "party-uuids": [
+                "09ad840f-aa79-43aa-9f22-25182c2ab11b"
+              ]
+            },
+            {
+              "role-id": "isa-authorizing-official-remote",
+              "party-uuids": [
+                "09ad840f-aa79-43aa-9f22-25182c2ab11b"
+              ]
+            },
+            {
+              "role-id": "isa-authorizing-official-local",
+              "party-uuids": [
+                "09ad840f-aa79-43aa-9f22-25182c2ab11b"
+              ]
+            }
+          ],
+          "remarks": "Optional notes about this interconnection"
+        },
+        {
+          "uuid": "55b55b3d-3bd9-409a-bc87-3b9a2074bacd",
+          "type": "network",
+          "title": "IPv4 Production Subnet",
+          "description": "IPv4 Production Subnet.",
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "c0dbefa1-c8e8-4ca8-bd73-67cb7b1fa3f6",
+          "type": "network",
+          "title": "IPv4 Management Subnet",
+          "description": "IPv4 Management Subnet.",
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "60f92bcf-f353-4236-9803-2a5d417555f5",
+          "type": "service",
+          "title": "Email Service",
+          "description": "Email Service",
+          "links": [
+            {
+              "href": "60f92bcf-f353-4236-9803-2a5d417555f4",
+              "rel": "used-by"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        }
+      ],
+      "inventory-items": [
+        {
+          "uuid": "98e37f90-fbb5-4177-badb-9b55229cc183",
+          "description": "Legacy Example (No implemented-component).",
+          "props": [
+            {
+              "name": "asset-id",
+              "value": "unique-asset-ID-1"
+            },
+            {
+              "name": "ipv4-address",
+              "value": "10.1.1.1"
+            },
+            {
+              "name": "ipv6-address",
+              "value": "2001:db8:3333:4444:5555:6666:7777:8888"
+            },
+            {
+              "name": "virtual",
+              "value": "no"
+            },
+            {
+              "name": "public",
+              "value": "no"
+            },
+            {
+              "name": "fqdn",
+              "value": "dns.name"
+            },
+            {
+              "name": "uri",
+              "value": "uniform.resource.identifier"
+            },
+            {
+              "name": "netbios-name",
+              "value": "netbios-name"
+            },
+            {
+              "name": "mac-address",
+              "value": "00:00:00:00:00:00"
+            },
+            {
+              "name": "software-name",
+              "value": "software-name"
+            },
+            {
+              "name": "asset-type",
+              "value": "operating-system"
+            },
+            {
+              "name": "serial-number",
+              "value": "Serial #"
+            },
+            {
+              "name": "asset-tag",
+              "value": "Asset Tag"
+            },
+            {
+              "name": "vlan-id",
+              "value": "VLAN Identifier"
+            },
+            {
+              "name": "network-id",
+              "value": "Network Identifier"
+            },
+            {
+              "name": "scan-type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "infrastructure"
+            },
+            {
+              "name": "allows-authenticated-scan",
+              "value": "no",
+              "remarks": "If no, explain why. If yes, omit remarks field."
+            },
+            {
+              "name": "baseline-configuration-name",
+              "value": "Baseline Config. Name"
+            },
+            {
+              "name": "physical-location",
+              "value": "Physical location of Asset"
+            },
+            {
+              "name": "is-scanned",
+              "value": "yes",
+              "remarks": "If no, explain why. If yes, omit remarks field."
+            },
+            {
+              "name": "function",
+              "value": "Required brief, text-based description.",
+              "remarks": "Optional, longer, formatted description."
+            }
+          ],
+          "links": [
+            {
+              "href": "#95beec7e-6f82-4aaa-8211-969cd7c1f1ab",
+              "rel": "validation"
+            }
+          ],
+          "responsible-parties": [
+            {
+              "role-id": "asset-owner",
+              "party-uuids": [
+                "db234cb7-1776-425c-9ac4-b067c1723011"
+              ]
+            },
+            {
+              "role-id": "asset-administrator",
+              "party-uuids": [
+                "b306f5af-b93a-4a7f-a2b2-37a44fc92a79"
+              ]
+            }
+          ],
+          "implemented-components": [
+            {
+              "component-uuid": "05ceb8df-52e7-49db-9719-891723f366bd",
+              "remarks": "This links to a FIPS 140-2 validated software component that is used by this inventory item. This type of linkage to a validation through the component is preferable to the link[rel='validation'] example above."
+            }
+          ],
+          "remarks": "COMMENTS: Additional information about this item."
+        },
+        {
+          "uuid": "c916d3c5-229e-4786-bf3f-4d71baa0e7a5",
+          "description": "Component Inventory Example",
+          "props": [
+            {
+              "name": "asset-id",
+              "value": "unique-asset-ID-2"
+            },
+            {
+              "name": "ipv4-address",
+              "value": "10.2.2.2"
+            },
+            {
+              "name": "ipv6-address",
+              "value": "0000:0000:0000:0000:0000:ffff:0a02:0202"
+            },
+            {
+              "name": "mac-address",
+              "value": "00:00:00:00:00:00"
+            },
+            {
+              "name": "asset-type",
+              "value": "appliance"
+            },
+            {
+              "name": "virtual",
+              "value": "no"
+            },
+            {
+              "name": "public",
+              "value": "no"
+            },
+            {
+              "name": "fqdn",
+              "value": "dns.name"
+            },
+            {
+              "name": "uri",
+              "value": "uniform.resource.locator"
+            },
+            {
+              "name": "netbios-name",
+              "value": "netbios-name"
+            },
+            {
+              "name": "baseline-configuration-name",
+              "value": "Baseline Configuration Name"
+            },
+            {
+              "name": "physical-location",
+              "value": "Physical location of Asset"
+            },
+            {
+              "name": "allows-authenticated-scan",
+              "value": "no",
+              "remarks": "If no, explain why. If yes, omit remark."
+            },
+            {
+              "name": "scan-type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "infrastructure"
+            }
+          ],
+          "responsible-parties": [
+            {
+              "role-id": "asset-owner",
+              "party-uuids": [
+                "3360e343-9860-4bda-9dfc-ff427c3dfab6"
+              ]
+            },
+            {
+              "role-id": "asset-administrator",
+              "party-uuids": [
+                "b306f5af-b93a-4a7f-a2b2-37a44fc92a79"
+              ]
+            }
+          ],
+          "implemented-components": [
+            {
+              "component-uuid": "05ceb8df-52e7-49db-9719-891723f366bd",
+              "props": [
+                {
+                  "name": "asset-id",
+                  "value": "unique-asset-ID-3"
+                }
+              ]
+            }
+          ],
+          "remarks": "COMMENTS: If needed, provide additional information about this inventory item."
+        },
+        {
+          "uuid": "37c00d5a-ccf2-4112-a0ee-8460be8cff40",
+          "description": "None.",
+          "props": [
+            {
+              "name": "asset-id",
+              "value": "unique-asset-ID-4"
+            },
+            {
+              "name": "asset-type",
+              "value": "web-server"
+            },
+            {
+              "name": "virtual",
+              "value": "yes"
+            },
+            {
+              "name": "public",
+              "value": "no"
+            },
+            {
+              "name": "ipv4-address",
+              "value": "10.3.3.3"
+            },
+            {
+              "name": "ipv6-address",
+              "value": "0000:0000:0000:0000:0000:ffff:0a03:0303"
+            },
+            {
+              "name": "is-scanned",
+              "value": "yes"
+            },
+            {
+              "name": "scan-type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "infrastructure"
+            }
+          ],
+          "implemented-components": [
+            {
+              "component-uuid": "1541015b-6d19-42cb-a991-624cc082ed4d"
+            }
+          ]
+        },
+        {
+          "uuid": "fb7a84fb-7e30-4f5b-9997-2ecd4d270bdd",
+          "description": "None.",
+          "props": [
+            {
+              "name": "asset-id",
+              "value": "unique-asset-ID-5"
+            },
+            {
+              "name": "asset-type",
+              "value": "appliance"
+            },
+            {
+              "name": "virtual",
+              "value": "yes"
+            },
+            {
+              "name": "public",
+              "value": "no"
+            },
+            {
+              "name": "ipv4-address",
+              "value": "10.4.4.4"
+            },
+            {
+              "name": "ipv6-address",
+              "value": "0000:0000:0000:0000:0000:ffff:0a04:0404"
+            },
+            {
+              "name": "is-scanned",
+              "value": "yes"
+            },
+            {
+              "name": "scan-type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "infrastructure"
+            }
+          ],
+          "implemented-components": [
+            {
+              "component-uuid": "05ceb8df-52e7-49db-9719-891723f366bd"
+            }
+          ]
+        },
+        {
+          "uuid": "779d4e89-bba6-432c-b50d-d699fe534129",
+          "description": "None.",
+          "props": [
+            {
+              "name": "asset-id",
+              "value": "unique-asset-ID-6"
+            },
+            {
+              "name": "asset-type",
+              "value": "firewall"
+            },
+            {
+              "name": "ipv4-address",
+              "value": "10.5.5.5"
+            },
+            {
+              "name": "ipv6-address",
+              "value": "0000:0000:0000:0000:0000:ffff:0a05:0505"
+            },
+            {
+              "name": "virtual",
+              "value": "no"
+            },
+            {
+              "name": "public",
+              "value": "yes"
+            },
+            {
+              "name": "is-scanned",
+              "value": "yes"
+            },
+            {
+              "name": "scan-type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "infrastructure"
+            }
+          ],
+          "implemented-components": [
+            {
+              "component-uuid": "8f230d84-2f9b-44a3-acdb-019566ab2554"
+            }
+          ]
+        },
+        {
+          "uuid": "20b207d5-5e77-4501-b02d-5d2a6e88db85",
+          "description": "None.",
+          "props": [
+            {
+              "name": "asset-id",
+              "value": "unique-asset-ID-7"
+            },
+            {
+              "name": "ipv4-address",
+              "value": "10.6.6.6"
+            },
+            {
+              "name": "ipv6-address",
+              "value": "0000:0000:0000:0000:0000:ffff:0a06:0606"
+            },
+            {
+              "name": "asset-type",
+              "value": "router"
+            },
+            {
+              "name": "virtual",
+              "value": "no"
+            },
+            {
+              "name": "public",
+              "value": "no"
+            },
+            {
+              "name": "is-scanned",
+              "value": "no",
+              "remarks": "Asset wasn't running at time of scan."
+            }
+          ],
+          "implemented-components": [
+            {
+              "component-uuid": "05ceb8df-52e7-49db-9719-891723f366bd"
+            }
+          ]
+        },
+        {
+          "uuid": "79b4f0d1-91ab-49e8-af28-045c12aa9272",
+          "description": "None.",
+          "props": [
+            {
+              "name": "asset-id",
+              "value": "unique-asset-ID-8"
+            },
+            {
+              "name": "asset-type",
+              "value": "switch"
+            },
+            {
+              "name": "ipv4-address",
+              "value": "10.7.7.7"
+            },
+            {
+              "name": "ipv6-address",
+              "value": "0000:0000:0000:0000:0000:ffff:0a07:0707"
+            },
+            {
+              "name": "virtual",
+              "value": "no"
+            },
+            {
+              "name": "public",
+              "value": "no"
+            },
+            {
+              "name": "is-scanned",
+              "value": "yes"
+            },
+            {
+              "name": "scan-type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "infrastructure"
+            }
+          ],
+          "implemented-components": [
+            {
+              "component-uuid": "1541015b-6d19-42cb-a991-624cc082ed4d"
+            }
+          ]
+        },
+        {
+          "uuid": "b31b360d-b58b-4c7c-b344-68e17238d858",
+          "description": "None.",
+          "props": [
+            {
+              "name": "asset-id",
+              "value": "unique-asset-ID-9"
+            },
+            {
+              "name": "asset-type",
+              "value": "web-server"
+            },
+            {
+              "name": "ipv4-address",
+              "value": "10.8.8.8"
+            },
+            {
+              "name": "ipv6-address",
+              "value": "0000:0000:0000:0000:0000:ffff:0a08:0808"
+            },
+            {
+              "name": "virtual",
+              "value": "yes"
+            },
+            {
+              "name": "public",
+              "value": "no"
+            },
+            {
+              "name": "is-scanned",
+              "value": "no",
+              "remarks": "Asset wasn't running at time of scan."
+            }
+          ],
+          "implemented-components": [
+            {
+              "component-uuid": "05ceb8df-52e7-49db-9719-891723f366bd"
+            }
+          ]
+        },
+        {
+          "uuid": "13c94c20-e4c4-44ee-bbbf-3d14fb01cb18",
+          "description": "Email-Service",
+          "props": [
+            {
+              "name": "asset-id",
+              "value": "unique-asset-ID-10"
+            },
+            {
+              "name": "asset-type",
+              "value": "email-server"
+            },
+            {
+              "name": "ipv4-address",
+              "value": "10.10.10.100"
+            },
+            {
+              "name": "ipv6-address",
+              "value": "0000:0000:0000:0000:0000:ffff:0a08:0808"
+            },
+            {
+              "name": "virtual",
+              "value": "yes"
+            },
+            {
+              "name": "public",
+              "value": "no"
+            },
+            {
+              "name": "is-scanned",
+              "value": "yes"
+            },
+            {
+              "name": "scan-type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "infrastructure"
+            }
+          ],
+          "implemented-components": [
+            {
+              "component-uuid": "60f92bcf-f353-4236-9803-2a5d417555f5"
+            }
+          ]
+        }
+      ]
+    },
+    "control-implementation": {
+      "description": "Appendix A - FedRAMP SSP Rev5 Template\n\nThis description field is required by OSCAL.\n\nFedRAMP does not require any specific information here.",
+      "implemented-requirements": [
+        {
+          "uuid": "eee8697a-bc39-45aa-accc-d3e534932efb",
+          "control-id": "ac-1",
+          "set-parameters": [
+            {
+              "param-id": "ac-1_prm_1",
+              "values": [
+                "organization-defined personnel or roles"
+              ]
+            },
+            {
+              "param-id": "ac-01_odp.05",
+              "values": [
+                "at least every 3 years"
+              ]
+            },
+            {
+              "param-id": "ac-01_odp.07",
+              "values": [
+                "at least annually"
+              ]
+            }
+          ],
+          "props": [
+            {
+              "name": "planned-completion-date",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "2024-01-31Z"
+            },
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "planned",
+              "remarks": "Describe the plan to complete the implementation."
+            },
+            {
+              "name": "control-origination",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "sp-system"
+            }
+          ],
+          "links": [
+            {
+              "href": "#330bac69-5840-479a-981b-afda037d7a6f",
+              "rel": "policy"
+            },
+            {
+              "href": "#e1fa7a30-efb8-4738-b4e2-7fbeb86644cd",
+              "rel": "procedure"
+            }
+          ],
+          "statements": [
+            {
+              "statement-id": "ac-1_smt",
+              "uuid": "240fa015-01df-4741-bff5-6958c7fb85e5",
+              "by-components": [
+                {
+                  "component-uuid": "60f92bcf-f353-4236-9803-2a5d417555f4",
+                  "uuid": "d9d1ce66-ff47-474d-8596-5fdf2af60179",
+                  "description": "Describe how the control is satisfied within the system."
+                }
+              ]
+            },
+            {
+              "statement-id": "ac-1_smt.a",
+              "uuid": "fb4d039a-dc4f-46f5-9c1f-f6343eaf69bc",
+              "by-components": [
+                {
+                  "component-uuid": "60f92bcf-f353-4236-9803-2a5d417555f4",
+                  "uuid": "3f5612a4-cd1d-4c47-8cae-75d2eaa332cd",
+                  "description": "Describe how Part a is satisfied within the system.",
+                  "links": [
+                    {
+                      "href": "#330bac69-5840-479a-981b-afda037d7a6f",
+                      "rel": "policy"
+                    },
+                    {
+                      "href": "#e1fa7a30-efb8-4738-b4e2-7fbeb86644cd",
+                      "rel": "procedure"
+                    }
+                  ],
+                  "remarks": "The specified component is the system itself.\n\nAny control implementation response that can not be associated with another component is associated with the component representing the system."
+                },
+                {
+                  "component-uuid": "88b8d7bb-ba23-4430-bf62-028eab822050",
+                  "uuid": "2CF56836-6834-49A9-96CD-4F49C17AAB01",
+                  "description": "Describe how this policy component satisfies part a."
+                }
+              ]
+            },
+            {
+              "statement-id": "ac-1_smt.b",
+              "uuid": "c365cf95-5bc0-4599-9773-f4eddf69798d",
+              "by-components": [
+                {
+                  "component-uuid": "60f92bcf-f353-4236-9803-2a5d417555f4",
+                  "uuid": "00507a44-e0d7-4fe6-ad20-8d474a84ee15",
+                  "description": "Describe how Part b is satisfied within the system for a component."
+                },
+                {
+                  "component-uuid": "fa90644a-8bf8-47da-b0d3-82bffc708afc",
+                  "uuid": "42ac379e-4abc-4716-809c-119c03b5ac64",
+                  "description": "Describe how Part b is satisfied within the system for another component."
+                }
+              ]
+            },
+            {
+              "statement-id": "ac-1_smt.b.1",
+              "uuid": "b46f97ec-55c1-4249-a9b9-3a228f1e3791",
+              "by-components": [
+                {
+                  "component-uuid": "60f92bcf-f353-4236-9803-2a5d417555f4",
+                  "uuid": "767666cb-e558-484b-81ca-b0209932425c",
+                  "description": "Describe how Part b-1 is satisfied."
+                }
+              ]
+            },
+            {
+              "statement-id": "ac-1_smt.b.2",
+              "uuid": "59c67969-3d5c-45f1-8e3e-1e642249633f",
+              "by-components": [
+                {
+                  "component-uuid": "60f92bcf-f353-4236-9803-2a5d417555f4",
+                  "uuid": "5a869308-1625-4d92-9ed8-ff5d8bd13656",
+                  "description": "Describe how Part b-2 is satisfied."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "uuid": "7a36cf53-156d-4d1f-9a8b-433f61cc57b7",
+          "control-id": "ac-2",
+          "props": [
+            {
+              "name": "planned-completion-date",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "2024-01-31Z"
+            },
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "implemented",
+              "remarks": "Describe the plan to complete the implementation."
+            },
+            {
+              "name": "control-origination",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "sp-system"
+            },
+            {
+              "name": "control-origination",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "customer-configured",
+              "remarks": "Describe any customer-configured requirements for satisfying this control."
+            }
+          ],
+          "responsible-roles": [
+            {
+              "role-id": "admin-unix",
+              "party-uuids": [
+                "3360e343-9860-4bda-9dfc-ff427c3dfab6"
+              ]
+            },
+            {
+              "role-id": "information-system-security-officer",
+              "party-uuids": [
+                "36b8d6c0-3b25-42cc-b529-cf4066145cdd"
+              ]
+            }
+          ],
+          "statements": [
+            {
+              "statement-id": "ac-2_smt",
+              "uuid": "4a2428eb-41eb-447a-81db-4f6d98a003ce",
+              "by-components": [
+                {
+                  "component-uuid": "60f92bcf-f353-4236-9803-2a5d417555f4",
+                  "uuid": "eb710146-1ede-4876-9a3b-02c18408e506",
+                  "description": "Describe how the control is satisfied within the system.",
+                  "set-parameters": [
+                    {
+                      "param-id": "ac-2_prm_1",
+                      "values": [
+                        "[SAMPLE]privileged, non-privileged"
+                      ]
+                    },
+                    {
+                      "param-id": "ac-2_prm_2",
+                      "values": [
+                        "[SAMPLE]all"
+                      ]
+                    },
+                    {
+                      "param-id": "ac-2_prm_3",
+                      "values": [
+                        "[SAMPLE]The Access Control Procedure"
+                      ]
+                    },
+                    {
+                      "param-id": "ac-2_prm_4",
+                      "values": [
+                        "at least annually"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "statement-id": "ac-2_smt.a",
+              "uuid": "24a85abb-25ad-4686-850c-5c0e8ab69a0c",
+              "by-components": [
+                {
+                  "component-uuid": "60f92bcf-f353-4236-9803-2a5d417555f4",
+                  "uuid": "b29d1505-69fa-4ad0-834b-d179e7f44f98",
+                  "description": "Describe how AC-2, part a is satisfied within this system.\n\nThis points to the \\\"This System\\\" component, and is used any time a more specific component reference is not available.",
+                  "export": {
+                    "provided": [
+                      {
+                        "uuid": "b068e08a-53b9-4f80-ac5f-0476c35c6e46",
+                        "description": "Leveraged system's statement of capabilities which may be inherited by a leveraging systems to satisfy AC-2, part a."
+                      }
+                    ],
+                    "responsibilities": [
+                      {
+                        "uuid": "39e5b068-deb7-4f93-9a32-2dcce15b1107",
+                        "provided-uuid": "b068e08a-53b9-4f80-ac5f-0476c35c6e46",
+                        "description": "Leveraged system's statement of a leveraging system's responsibilities in satisfaction of AC-2, part a.\n\nNot associated with inheritance, thus associated this with the by-component for \\\"this system\\\".",
+                        "responsible-roles": [
+                          {
+                            "role-id": "cloud-service-provider",
+                            "party-uuids": [
+                              "6b286b5d-8f07-4fa7-8847-1dd0d88f73fb"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "component-uuid": "d5841417-de4c-4d84-ab3c-39dd1fd32a96",
+                  "uuid": "8a72663c-28c7-41c2-8739-f1ee2d5761ac",
+                  "description": "For the portion of the control satisfied by the application component of this system, describe **how** the control is met.",
+                  "export": {
+                    "provided": [
+                      {
+                        "uuid": "11111111-0000-4000-9009-002001002001",
+                        "description": "Consumer-appropriate description of what may be inherited from this application component by a leveraging system.\n\nIn the context of the application component in satisfaction of AC-2, part a.",
+                        "responsible-roles": [
+                          {
+                            "role-id": "customer",
+                            "party-uuids": [
+                              "f595397b-cbe4-4a87-8c86-9bff91c4e7fd"
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "responsibilities": [
+                      {
+                        "uuid": "11111111-0000-4000-9009-002001002002",
+                        "provided-uuid": "11111111-0000-4000-9009-002001002001",
+                        "description": "Leveraging system's responsibilities with respect to inheriting this capability from this application.\n\nIn the context of the application component in satisfaction of AC-2, part a.",
+                        "responsible-roles": [
+                          {
+                            "role-id": "customer",
+                            "party-uuids": [
+                              "f595397b-cbe4-4a87-8c86-9bff91c4e7fd"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "remarks": "The component-uuid above points to the \\\"this system\\\" component.\n\nAny control response content that does not cleanly fit another system component is placed here. This includes customer responsibility content.\n\nThis can also be used to provide a summary, such as a holistic overview of how multiple components work together.\n\nWhile the \\\"this system\\\" component is not explicitly required within every `statement`, it will typically be present."
+                },
+                {
+                  "component-uuid": "e82e6e07-0c62-417e-8a19-3744991b4c65",
+                  "uuid": "84de735f-ba37-4bb4-b784-79760f986a40",
+                  "description": "For the portion inherited from an underlying FedRAMP-authorized provider, describe **what** is inherited.",
+                  "inherited": [
+                    {
+                      "uuid": "780A3910-2019-4D33-A2F9-5C6AC91929D6",
+                      "provided-uuid": "11111111-0000-4000-9009-002001002001",
+                      "description": "Optional description.\n\nConsumer-appropriate description of what may be inherited as provided by the leveraged system.\n\nIn the context of this component in satisfaction of AC-2, part a.\n\nThe `provided-uuid` links this to the same statement in the leveraged system's SSP.\n\nIt may be linked directly, but is more commonly provided via an OSCAL-based CRM (Inheritance and Responsibility Model)."
+                    }
+                  ],
+                  "satisfied": [
+                    {
+                      "uuid": "6486F725-1372-434F-9B1B-7CF3F50C32D1",
+                      "responsibility-uuid": "11111111-0000-4000-9009-002001002002",
+                      "description": "Description of how the responsibility was satisfied.\n\nThe `responsibility-uuid` links this to the same statement in the leveraged system's SSP.\n\nIt may be linked directly, but is more commonly provided via an OSCAL-based CRM (Inheritance and Responsibility Model).\n\nTools should use this to ensure all identified customer `responsibility` statements have a corresponding `satisfied` statement in the leveraging system's SSP.\n\nTool developers should be mindful that "
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "uuid": "381c8d0c-e6ec-41a9-9b16-01657226c70f",
+          "control-id": "au-1",
+          "props": [
+            {
+              "name": "planned-completion-date",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "2024-01-31Z"
+            },
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "partial",
+              "remarks": "Describe the plan to complete the implementation."
+            },
+            {
+              "name": "control-origination",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "sp-corporate"
+            }
+          ],
+          "links": [
+            {
+              "href": "#64977a9e-cd62-4c04-891e-7943e9046179",
+              "rel": "policy"
+            },
+            {
+              "href": "#b1cdaad8-2127-4563-b248-3d2777307c4f",
+              "rel": "procedure"
+            }
+          ],
+          "responsible-roles": [
+            {
+              "role-id": "information-system-security-officer",
+              "party-uuids": [
+                "36b8d6c0-3b25-42cc-b529-cf4066145cdd"
+              ]
+            }
+          ],
+          "set-parameters": [
+            {
+              "param-id": "au-1_prm_1",
+              "values": [
+                "organization-defined personnel or roles"
+              ]
+            },
+            {
+              "param-id": "au-01_odp.05",
+              "values": [
+                "at least every 3 years"
+              ]
+            },
+            {
+              "param-id": "au-01_odp.07",
+              "values": [
+                "at least annually"
+              ]
+            }
+          ],
+          "statements": [
+            {
+              "statement-id": "au-1_smt",
+              "uuid": "a9a883f4-f550-4f11-941a-2eb9ce9c3faf",
+              "by-components": [
+                {
+                  "component-uuid": "60f92bcf-f353-4236-9803-2a5d417555f4",
+                  "uuid": "e985ae45-6ab4-4f12-8699-3ebf87e35bd5",
+                  "description": "Describe how the control is satisfied within the system."
+                }
+              ]
+            },
+            {
+              "statement-id": "au-1_smt.a",
+              "uuid": "9a2bd937-226e-4aaf-8261-2cf0c2e3aa10",
+              "by-components": [
+                {
+                  "component-uuid": "60f92bcf-f353-4236-9803-2a5d417555f4",
+                  "uuid": "30042cb9-ff85-472f-b769-68bd7bb5bbd9",
+                  "description": "For the portion of the control satisfied by the service provider, describe **how** the control is met.",
+                  "links": [
+                    {
+                      "href": "#64977a9e-cd62-4c04-891e-7943e9046179",
+                      "rel": "policy"
+                    }
+                  ]
+                },
+                {
+                  "component-uuid": "88b8d7bb-ba23-4430-bf62-028eab822050",
+                  "uuid": "d3fca6df-63b7-4b73-b49c-c954e73c7ddb",
+                  "description": "Describe how this policy component satisfies part a.\n\nComponent approach. This links to a component representing the Policy.\n\nThat component contains a link to the policy, so it does not have to be linked here too."
+                },
+                {
+                  "component-uuid": "fa90644a-8bf8-47da-b0d3-82bffc708afc",
+                  "uuid": "34cc172b-e868-4570-9947-c86b3612f2fb",
+                  "description": "Describe how this procedure component satisfies part a.\n\nComponent approach. This links to a component representing the procedure.\n\nThat component contains a link to the procedure, so it does not have to be linked here too."
+                }
+              ]
+            },
+            {
+              "statement-id": "au-1_smt.b.1",
+              "uuid": "d01f186f-a14f-4e22-b069-84a55e48a112",
+              "by-components": [
+                {
+                  "component-uuid": "60f92bcf-f353-4236-9803-2a5d417555f4",
+                  "uuid": "f41962c7-b53b-46f8-a84f-4aba25904bb8",
+                  "description": "For the portion of the control satisfied by the service provider, describe **how** the control is met.",
+                  "links": [
+                    {
+                      "href": "#64977a9e-cd62-4c04-891e-7943e9046179",
+                      "rel": "policy"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "statement-id": "au-1_smt.b.2",
+              "uuid": "ea153acb-2bd0-41d9-8ebd-ba022d31230a",
+              "by-components": [
+                {
+                  "component-uuid": "60f92bcf-f353-4236-9803-2a5d417555f4",
+                  "uuid": "9ad59f0d-17a2-4f3f-af6a-a8529d692195",
+                  "description": "For the portion of the control satisfied by the service provider, describe **how** the control is met.",
+                  "links": [
+                    {
+                      "href": "#64977a9e-cd62-4c04-891e-7943e9046179",
+                      "rel": "policy"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "uuid": "9e2852c6-f48a-47b2-9ea5-77cbbb42b365",
+          "control-id": "sc-1",
+          "props": [
+            {
+              "name": "planned-completion-date",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "2024-01-31Z"
+            },
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "implemented",
+              "remarks": "Describe the plan to complete the implementation."
+            },
+            {
+              "name": "control-origination",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "sp-system"
+            }
+          ],
+          "links": [
+            {
+              "href": "#03ae437f-fffc-48e3-81f1-4040fce2d6e3",
+              "rel": "policy"
+            },
+            {
+              "href": "#936093ce-a567-4592-8fcc-eeeef024cdd4",
+              "rel": "procedure"
+            }
+          ],
+          "responsible-roles": [
+            {
+              "role-id": "information-system-security-officer",
+              "party-uuids": [
+                "36b8d6c0-3b25-42cc-b529-cf4066145cdd"
+              ]
+            }
+          ],
+          "statements": [
+            {
+              "statement-id": "sc-1_smt",
+              "uuid": "3f1307fa-7405-42ea-a9ad-61b7a94bc704",
+              "by-components": [
+                {
+                  "component-uuid": "60f92bcf-f353-4236-9803-2a5d417555f4",
+                  "uuid": "8c52b949-a7ad-4bef-9da2-b342cef3dc45",
+                  "description": "Describe how the control is satisfied within the system.",
+                  "set-parameters": [
+                    {
+                      "param-id": "sc-1_prm_1",
+                      "values": [
+                        "organization-defined personnel or roles"
+                      ]
+                    },
+                    {
+                      "param-id": "sc-1_prm_2",
+                      "values": [
+                        "at least every 3 years"
+                      ]
+                    },
+                    {
+                      "param-id": "sc-1_prm_3",
+                      "values": [
+                        "at least annually"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "statement-id": "sc-1_smt.a",
+              "uuid": "5e2e8372-c13b-4cf5-90c5-e8833a9fe241",
+              "by-components": [
+                {
+                  "component-uuid": "60f92bcf-f353-4236-9803-2a5d417555f4",
+                  "uuid": "88cfadba-043b-483b-8032-73344aa53c96",
+                  "description": "For the portion of the control satisfied by the service provider, describe **how** the control is met."
+                },
+                {
+                  "component-uuid": "88b8d7bb-ba23-4430-bf62-028eab822050",
+                  "uuid": "7a673b8a-4c21-49b0-89bd-216753af6bbc",
+                  "description": "Describe how this policy component satisfies part a.\n\nComponent approach. This links to a component representing the Policy.\n\nThat component contains a link to the policy, so it does not have to be linked here too."
+                },
+                {
+                  "component-uuid": "fa90644a-8bf8-47da-b0d3-82bffc708afc",
+                  "uuid": "b1b50bf8-58ae-4e93-a5f6-b6f0b8b1d7af",
+                  "description": "Describe how this procedure component satisfies part a.\n\nComponent approach. This links to a component representing the procedure.\n\nThat component contains a link to the procedure, so it does not have to be linked here too."
+                }
+              ]
+            },
+            {
+              "statement-id": "sc-1_smt.b.1",
+              "uuid": "8166980a-86c0-497d-87e4-453adfd0d4bd",
+              "by-components": [
+                {
+                  "component-uuid": "60f92bcf-f353-4236-9803-2a5d417555f4",
+                  "uuid": "9abaeb64-56d2-48a1-bd8d-7b55411d31ca",
+                  "description": "For the portion of the control satisfied by the service provider, describe **how** the control is met."
+                }
+              ]
+            },
+            {
+              "statement-id": "sc-1_smt.b.2",
+              "uuid": "eeea34ff-18ab-4c35-bf32-c74dbf746e7b",
+              "by-components": [
+                {
+                  "component-uuid": "60f92bcf-f353-4236-9803-2a5d417555f4",
+                  "uuid": "ad20ff50-8a7c-4ffc-a918-260960f6fb42",
+                  "description": "For the portion of the control satisfied by the service provider, describe **how** the control is met."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "back-matter": {}
+  }
+}
