@@ -1,6 +1,6 @@
 # compliance-trestle-fedramp
 
-A plugin for [compliance-trestle](https://github.com/IBM/compliance-trestle) to provide functionality specifically for FedRAMP.
+A plugin for [compliance-trestle](https://github.com/oscal-compass/compliance-trestle) to provide functionality specifically for FedRAMP.
 
 This plugin provides APIs and commands for validating a FedRAMP compliant SSP (in JSON or YAML format). In future it will also provide utilities for converting various OSCAL models from XML to JSON format and vice-versa.
 
@@ -23,7 +23,7 @@ Our project welcomes external contributions. Please consult [contributing](CONTR
 ## License & Authors
 
 If you would like to see the detailed LICENSE click [here](LICENSE).
-Consult [contributors](https://github.com/IBM/compliance-trestle-fedramp/graphs/contributors) for a list of authors and [maintainers](MAINTAINERS.md) for the core team.
+Consult [contributors](https://github.com/oscal-compass/compliance-trestle-fedramp/graphs/contributors) for a list of authors and [maintainers](MAINTAINERS.md) for the core team.
 
 ```text
 # Copyright (c) 2020 IBM Corp. All rights reserved.

@@ -140,7 +140,7 @@ jobs:
         path: coverage.xml
 
   sonar:
-    if: github.repository == 'IBM/compliance-trestle-fedramp'
+    if: github.repository == 'oscal-compass/compliance-trestle-fedramp'
     runs-on: ubuntu-latest
     needs: test
     steps:
